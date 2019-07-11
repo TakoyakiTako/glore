@@ -9,5 +9,5 @@ pytorch >= 1.0.1
 
 # Usage
 
-Please put "GloRe Module" anywhere you like :good:  
+Please put "GloRe Module" anywhere you like :+1:  
 
