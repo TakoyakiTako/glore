@@ -9,8 +9,8 @@ class GloRe(nn.Module):
         # node channel  : int(channel)
         self.reduce_dim = nn.Conv2d(channel,int(channel), kernel_size=1, stride=1, bias=False)
         self.create_projection_matrix = nn.Conv2d(channel,int(channel/4), kernel_size=1, stride=1, bias=False)
-        self.GCN_step_1 = nn.Conv1d(in_channels=int(channel),out_channels=int(channel),kernel_size=3, stride=1,padding=1)
-        self.GCN_step_2 = nn.Conv1d(in_channels=int(channel/4),out_channels=int(channel/4),kernel_size=3, stride=1,padding=1)
+        self.GCN_step_1 = nn.Conv1d(in_channels=int(channel),out_channels=int(channel),kernel_size=1, stride=1,padding=0)
+        self.GCN_step_2 = nn.Conv1d(in_channels=int(channel/4),out_channels=int(channel/4),kernel_size=1, stride=1,padding=0)
         self.expand_dim = nn.Conv2d(int(channel),channel, kernel_size=1, stride=1, bias=False)    
 
     def forward(self, x):
